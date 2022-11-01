@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Add a To-Do
+        </title>
+        <style>
+            .form-box {
+    background-color: white;
+    width: 450px;
+    padding: 40px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-color: black;
+    border: 5px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.15);
+}
+
+button {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    background: #36a420;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 5px;
+    border: 2px solid #36a420;
+    cursor: pointer;
+}
+button:hover {
+    background: #42b72a;
+    border: 2px solid #42b72a;
+}
+input{
+    display: block;
+    width: 90%;
+    padding: 11px;
+    border-radius: 11px;
+    outline: none;
+    color: #101010;
+}
+textarea{
+    display: block;
+    width: 90%;
+    padding: 11px;
+    border-radius: 11px;
+    outline: black;
+    color: #101010;
+}
+        </style>
+    </head>
+    <body>
+        <center><h1><b>Add ToDo</b></h1></center>
+        <div class="form-box">
+        <form action="/add" method="POST">
+        <div class="msg">{{ msg }}</div>
+        <h4><label for="title">Title:</label></h4>
+        <input type="textarea" id="title" name="title" placeholder="To-Do Title" size="53" autofocus><br><br>
+        <h4><label for="des">About To-Do:</label></h4>
+        <textarea id="des" name="des" rows="8" cols="50" placeholder="Description"></textarea><br><br>
+        <input type="datetime-local" id="myDate" name="myDate" >
+        <br>
+        <br>
+        <center><button onclick="setTimeout(myFunction, 000);">Submit</button></center>
+    </form>
+    <script>
+        function myFunction() {
+          alert('Recorded Successfully');
+        }
+        </script>
+    </body>
+</html>
