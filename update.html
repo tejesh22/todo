@@ -1,0 +1,71 @@
+
+<!--Store this code in 'update.html' file inside the 'templates' folder-->
+<html lang="en">
+    <head>
+        <title>update</title>
+        <style>
+form {
+    background-color: white;
+    width: 450px;
+    padding: 40px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-color: black;
+    border: 5px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.15);
+}
+input{
+    display: block;
+    width: 90%;
+    padding: 11px;
+    border-radius: 11px;
+    outline: none;
+    color: #101010;
+}
+.button {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    background: #36a420;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 5px;
+    border: 2px solid #36a420;
+    cursor: pointer;
+}
+.button:hover {
+    background: #42b72a;
+    border: 2px solid #42b72a;
+}
+
+        </style>
+    </head>
+    <body>
+        <div class="one">
+            <div class="two">
+                
+            <div class="content" align="center">
+                <div class="topbar">
+                    <h2>Welcome!! You are in Update Page!! </h2>                       
+                </div></br></br>
+                <div class="contentbar">
+                  <h1>Fill Your Details to Update</h1></br><br><br>
+              <form action="{{ url_for('update') }}" method="post" autocomplete="off">
+                    <div class="msg">{{ msg }}</div>
+                    <input type="text" name="id" placeholder="Enter id" class="textbox" id="Id" required></br></br>
+                    <input type="text" name="title" placeholder="Enter title" class="textbox" id="title" required></br></br>
+                    <input type="text" name="des" placeholder="Enter Your description" class="textbox" id="des" required></br></br>
+                    <input type="text" name="myDate" placeholder="Enter Date" class="textbox" id="myDate" required></br></br>
+                    <input type="submit" class="button" value="Update">
+              </form>                    
+                </div> 
+                 
+            </div>
+        </div>
+    </body>
+</html>
